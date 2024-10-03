@@ -164,27 +164,25 @@
                                                 class="bi bi-x-circle" style="color: rgba(0, 0, 0, 0.356);"></i></a>
                                     </div>
                                     <div class="modal-body">
-                                        <form method="POST"
-                                            action="https://formsubmit.co/Bidaiaagenciadeviajes@gmail.com"
-                                            id="miFormulario">
+                                        <form id="form">
                                             <div class="form-group">
                                                 <input type="text" class="form-control p-4"
-                                                    placeholder="Nombre y apellido" name="Nombre" id="nombre"
+                                                    placeholder="Nombre y apellido" name="name" 
                                                     required="required" />
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-control p-4"
-                                                    placeholder="Número de teléfono" name="Telefono" id="telefono"
+                                                    placeholder="Número de teléfono" name="phone"
                                                     required="required" />
                                             </div>
                                             <div class="form-group">
                                                 <input type="email" class="form-control p-4"
-                                                    placeholder="Correo electrónico" name="correo" id="correo"
+                                                    placeholder="Correo electrónico" name="email"
                                                     required="required" />
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-control p-4" placeholder="Destino"
-                                                    name="Destino" id="destino" readonly />
+                                                    name="destination" readonly />
                                             </div>
                                             <div class="form-group">
                                                 <div class="row">
@@ -193,21 +191,21 @@
                                                             src="../../assets/icons/despegue-del-avion.png"
                                                             title="Salida">
                                                         <input type="date" class="form-control p-4" required="required"
-                                                            name="salida" id="salida" title="Fecha de salida" />
+                                                            name="salida" title="Fecha de salida" />
                                                     </div>
                                                     <div class="col-lg-6">
                                                         <img class="icons"
                                                             src="../../assets/icons/aterrizaje-de-avion.png"
                                                             title="Salida">
                                                         <input type="date" class="form-control p-4" required="required"
-                                                            name="regreso" id="regreso" title="Fecha de salida" />
+                                                            name="regreso" title="Fecha de salida" />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-lg-6"><select class="custom-select px-4"
-                                                            style="height: 47px;" name="adultos" id="adultos">
+                                                            style="height: 47px; margin-bottom: 10px;" name="adult" >
                                                             <option selected>Adultos</option>
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
@@ -219,7 +217,7 @@
                                                     </br>
                                                     </br>
                                                     <div class="col-lg-6"><select class="custom-select px-4"
-                                                            style="height: 47px;" name="niños" value="0"
+                                                            style="height: 47px; margin-bottom: 10px;" name="children" value="0"
                                                             data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                             data-bs-title="Debe tener entre 2 y 11 años de Edad ">
                                                             <option selected value="0">Niños</option>
@@ -232,12 +230,15 @@
                                             </div>
 
                                             <div>
-                                                <button class="btn btn-primary btn-block py-3"
-                                                    type="submit">Cotizar</button>
-                                                <input type="hidden" name="_next" value="https://bidaia.netlify.app/">
-                                                <input type="hidden" name="_captcha" value="false">
+                                                <input class="btn btn-primary btn-block py-3" type="submit" id="button" value="Cotizar" >
                                             </div>
                                         </form>
+                                        <script type="text/javascript"
+                                            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+                                            <script type="text/javascript">
+                                            emailjs.init('9QRjE7zwHrH_s71DH')
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -356,6 +357,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="./script.js"></script>
+    <script src="./form.js"></script>
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

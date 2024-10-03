@@ -537,29 +537,33 @@
             <div class="col-sm-4 col-md-4 col-lg-4 align-self-end">
                 <div class="container_form" style="align-content: center;">
                     <h5>Consultas</h5>
-                    <form method="POST" action="https://formsubmit.co/Bidaiaagenciadeviajes@gmail.com">
+                    <form id="form">
                         <div class="form-group">
                             <input type="text" class="form-control p-3" style="border-radius: 10px;" placeholder="Nombre y apellido"
-                                name="Nombre" id="nombre" required="required"  />
+                                name="name" required="required"  />
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control p-3" style="border-radius: 10px;" placeholder="Número de teléfono"
-                            name="Telefono" id="telefono" required="required" />
+                            name="phone"  required="required" />
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control p-3" style="border-radius: 10px;" placeholder="Correo electrónico"
-                            name="correo" id="correo" required="required" />
+                            name="email" id="correo" required="required" />
                         </div>
                         <div class="form-group">
                             <textarea class="form-control p-3" style="border-radius: 10px;" placeholder="Describe la consulta"
-                            name="correo" id="correo" required="required" rows="2"></textarea>
+                            name="consulta" id="correo" required="required" rows="2"></textarea>
                         </div>
                         <div>
-                            <button class="btn btn-primary btn-block py-3" style="border-radius: 10px;" type="submit">Consultar</button>
-                            <input type="hidden" name="_next" value="https://bidaia.netlify.app/">
-                            <input type="hidden" name="_captcha" value="false">
+                            <input class="btn btn-primary btn-block py-3" type="submit" id="button" value="Consultar" >
                         </div>
                     </form>
+                    <script type="text/javascript"
+                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+                    <script type="text/javascript">
+                        emailjs.init('9QRjE7zwHrH_s71DH')
+                    </script>
                 </div>
             </div>
         </div>
@@ -646,6 +650,8 @@
     <script src="../../js/app.js"></script>
     <script src="../../js/tabs.js"></script>
     <script src="../Tailandia/script.js"></script>
+    <script src="../Tailandia/form.js"></script>
+    
 </body>
 
 </html>
