@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BIDAIA</title>
+    <title>Bidaia</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="../img/favicon.ico" rel="icon">
+    <link href="../../img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,18 +19,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="../../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../css/style.css" rel="stylesheet">
-
+    <link href="../../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- icono -->
-    <link rel="icon" href="../../assets/logo.ico" type="image/x-icon">
+    <link rel="icon" href="../../assets/Logo.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../../css/styles.css">
+
 </head>
 
 <body style="background-color: white;">
@@ -45,9 +48,6 @@
                         </a>
                         <a class="text-primary px-3" href="">
                             <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="text-primary px-3" href="">
-                            <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a class="text-primary px-3" href="https://www.instagram.com/bidaia_co/">
                             <i class="fab fa-instagram"></i>
@@ -76,7 +76,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="http://localhost/PaginaBidaia/paquetes/" class="nav-item nav-link">Paquetes</a>
+                        <a href="http://localhost/PaginaBidaia/paquetes/" class="nav-item nav-link ">Paquetes</a>
                         <a href="http://localhost/PaginaBidaia/destinos/" class="nav-item nav-link active">Destinos</a>
                         <a href="http://localhost/PaginaBidaia/#Price" class="nav-item nav-link">Cotizar</a>
                         <a href="http://localhost/PaginaBidaia/#about" class="nav-item nav-link">Acerca de nosotros</a>
@@ -96,93 +96,70 @@
             </div>
         </div>
     </div>
-    <!-- Destination Start -->
-
-    <!-- cards -->
-    <div class="container">
+    <div class="container" style="width: 100%;">
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4" >
-                <div class="card" style="width: 18rem; left: 30px;">
-                    <div class="slider_destino" style="width: 100%; ">
-                        <div class="slides_paquetes">
-                            <div class="slide_paquetes active">
-                                <img class="img_paquetes" src="./img/NY.jpg" alt="timesSquare">
-                            </div>
-                            <div class="slide_paquetes">
-                                <img class="img_paquetes" src="./img/CP.jpg" alt="centralPark">
-                            </div>
-                            <div class="slide_paquetes">
-                                <img class="img_paquetes" src="./img/EL.jpg" alt="estatuaLibertad">
-                            </div>
-                            <div class="slide_paquetes">
-                                <img class="img_paquetes" src="./img/EP.jpg" alt="Empire">
-                            </div>
-                            <div class="slide_paquetes">
-                                <img class="img_paquetes" src="./img/EP2.jpg" alt="Empire2">
-                            </div>
-                            <div class="slide_paquetes">
-                                <img class="img_paquetes" src="./img/PB.jpg" alt="puenteBrooklyn">
-                            </div>
-                        </div>
-                        <button class="prev_paquetes button_paquetes" onclick="moveSlide(-1)"
-                            style="background-color: transparent;"></button>
-                        <button class="next_paquetes button_paquetes" onclick="moveSlide(1)"
-                            style="background-color: transparent;"></button>
-                    </div>
-                    <div class="card-body" >
-                        <h4 class="card-title">New York</h4>
+            <div class="col-md-4">
+                <div class="card cardDestino">
+                    <section class="sectionDestino">
+                        <img src="./img/nuevaYork/1.jpg" alt="">
+                        <img src="./img/nuevaYork/2.jpg" alt="">
+                        <img src="./img/nuevaYork/3.jpg" alt="">
+                        <img src="./img/nuevaYork/4.jpg" alt="">
+                        <img src="./img/nuevaYork/5.jpg" alt="">
+                    </section>
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center; color: #00B5E2;">New York</h4>
+                        <hr class="divider">
                         <ul class="custom-list">
-                            <li style="color: #00B5E2;">
+                            <li style="color:rgb(240, 143, 53);">
                                 <p style="color: black;">Times Square</p>
                             </li>
-                            <li style="color: #00B5E2;">
+                            <li style="color: rgb(240, 143, 53);">
                                 <p style="color: black;">Central Park</p>
                             </li>
-                            <li style="color: #00B5E2;">
+                            <li style="color: rgb(240, 143, 53);">
                                 <p style="color: black;">Estatua de la Libertad</p>
                             </li>
-                            <li style="color: #00B5E2;">
+                            <li style="color: rgb(240, 143, 53);">
                                 <p style="color: black;">Empire State Building</p>
                             </li>
-                            <li style="color: #00B5E2;">
+                            <li style="color: rgb(240, 143, 53);">
                                 <p style="color: black;">Puente de Brooklyn</p>
                             </li>
                         </ul>
                         <!-- Modal de cotizar ciudad-->
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" data-bs-whatever="@mdo" id="boton1"
-                            value="New York">Cotizar</button>
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                            onclick="asignarValor('Nueva york')">Cotizar</button>
 
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content" style="border-radius: 10px;">
-                                    <div class="modal-header" style="background-color: #00B5E2; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                                    <div class="modal-header"
+                                        style="background-color: #00B5E2; border-top-left-radius: 10px; border-top-right-radius: 10px;">
                                         <h1 class="text-white">Cotización</h1>
-                                        
-                                        <a class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="position:absolute; left: 90%;"><i
-                                                class="bi bi-x-circle" style="color: rgba(0, 0, 0, 0.356);"></i></a>
+
+                                        <a class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                            style="position:absolute; left: 90%;"></a>
                                     </div>
                                     <div class="modal-body">
                                         <form id="form">
                                             <div class="form-group">
                                                 <input type="text" class="form-control p-4"
-                                                    placeholder="Nombre y apellido" name="name" 
-                                                    required="required" />
+                                                    placeholder="Nombre y apellido" name="name" required="required" />
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-control p-4"
-                                                    placeholder="Número de teléfono" name="phone"
-                                                    required="required" />
+                                                    placeholder="Número de teléfono" name="phone" required="required" />
                                             </div>
                                             <div class="form-group">
                                                 <input type="email" class="form-control p-4"
-                                                    placeholder="Correo electrónico" name="email"
-                                                    required="required" />
+                                                    placeholder="Correo electrónico" name="email" required="required" />
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-control p-4" placeholder="Destino"
-                                                    name="destination" readonly />
+                                                    name="destination" id="destination" readonly />
                                             </div>
                                             <div class="form-group">
                                                 <div class="row">
@@ -205,7 +182,7 @@
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-lg-6"><select class="custom-select px-4"
-                                                            style="height: 47px; margin-bottom: 10px;" name="adult" >
+                                                            style="height: 47px; margin-bottom: 10px;" name="adult">
                                                             <option selected>Adultos</option>
                                                             <option value="1">1</option>
                                                             <option value="2">2</option>
@@ -217,8 +194,9 @@
                                                     </br>
                                                     </br>
                                                     <div class="col-lg-6"><select class="custom-select px-4"
-                                                            style="height: 47px; margin-bottom: 10px;" name="children" value="0"
-                                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                            style="height: 47px; margin-bottom: 10px;" name="children"
+                                                            value="0" data-bs-toggle="tooltip"
+                                                            data-bs-placement="bottom"
                                                             data-bs-title="Debe tener entre 2 y 11 años de Edad ">
                                                             <option selected value="0">Niños</option>
                                                             <option value="1">1</option>
@@ -230,13 +208,14 @@
                                             </div>
 
                                             <div>
-                                                <input class="btn btn-primary btn-block py-3" type="submit" id="button" value="Cotizar" >
+                                                <input class="btn btn-primary btn-block py-3" type="submit" id="button"
+                                                    value="Cotizar">
                                             </div>
                                         </form>
                                         <script type="text/javascript"
                                             src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-                                            <script type="text/javascript">
+                                        <script type="text/javascript">
                                             emailjs.init('9QRjE7zwHrH_s71DH')
                                         </script>
                                     </div>
@@ -247,39 +226,272 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card" style="width: 18rem; left: 30px;">
-                    <img src="/img/about-1.jpg" class="card-img-top" alt="...">
+            <div class="col-md-4">
+                <div class="card cardDestino">
+                    <section class="sectionDestino">
+                        <img src="./img/orlando/1.jpeg" alt="">
+                        <img src="./img/orlando/2.jpg" alt="">
+                        <img src="./img/orlando/3.jpg" alt="">
+                        <img src="./img/orlando/4.jpg" alt="">
+                        <img src="./img/orlando/5.jpeg" alt="">
+                    </section>
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h4 class="card-title" style="text-align: center; color: #00B5E2;">Orlando</h4>
+                        <hr class="divider">
+                        <ul class="custom-list">
+                            <li style="color:rgb(240, 143, 53);">
+                                <p style="color: black;">Walt Disney World</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Universal Orlando</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">SeaWorld Orlando</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Disney Springs</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Kennedy Space Center</p>
+                            </li>
+                        </ul>
+                        <!-- Modal de cotizar ciudad-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                            onclick="asignarValor('Orlando')">Cotizar</button>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4" >
-                <div class="card" style="width: 18rem; left: 30px;">
-                    <img src="/img/about-1.jpg" class="card-img-top" alt="...">
+            <div class="col-md-4">
+                <div class="card cardDestino">
+                    <section class="sectionDestino">
+                        <img src="./img/sanfrancisco/1.jpg" alt="">
+                        <img src="./img/sanfrancisco/2.jpg" alt="">
+                        <img src="./img/sanfrancisco/3.jpg" alt="">
+                        <img src="./img/sanfrancisco/4.jpg" alt="">
+                        <img src="./img/sanfrancisco/5.jpg" alt="">
+                    </section>
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h4 class="card-title" style="text-align: center; color: #00B5E2;">San Francisco</h4>
+                        <hr class="divider">
+                        <ul class="custom-list">
+                            <li style="color:rgb(240, 143, 53);">
+                                <p style="color: black;">Puente Golden Gate</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Alcatraz</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Fishermans Wharf</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Chinatown</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Lombard Street</p>
+                            </li>
+                        </ul>
+                        <!-- Modal de cotizar ciudad-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                            onclick="asignarValor('San Francisco')">Cotizar</button>
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card cardDestino">
+                    <section class="sectionDestino">
+                        <img src="./img/losAngeles/1.jpeg" alt="">
+                        <img src="./img/losAngeles/2.jpg" alt="">
+                        <img src="./img/losAngeles/3.jpg" alt="">
+                        <img src="./img/losAngeles/4.jpg" alt="">
+                        <img src="./img/losAngeles/5.jpeg" alt="">
+                    </section>
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center; color: #00B5E2;">Los Ángeles</h4>
+                        <hr class="divider">
+                        <ul class="custom-list">
+                            <li style="color:rgb(240, 143, 53);">
+                                <p style="color: black;">Hollywood Walk of Fame</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Griffith Observatory</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Universal Studios Hollywood</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Santa Mónica Pier</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Rodeo Drive</p>
+                            </li>
+                        </ul>
+                        <!-- Modal de cotizar ciudad-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                            onclick="asignarValor('Los Angeles')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card cardDestino">
+                    <section class="sectionDestino">
+                        <img src="./img/lasVegas//1.jpeg" alt="">
+                        <img src="./img/lasVegas//2.jpg" alt="">
+                        <img src="./img/lasVegas//3.jpg" alt="">
+                        <img src="./img/lasVegas//4.jpg" alt="">
+                        <img src="./img/lasVegas//5.jpeg" alt="">
+                    </section>
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center; color: #00B5E2;">Las Vegas</h4>
+                        <hr class="divider">
+                        <ul class="custom-list">
+                            <li style="color:rgb(240, 143, 53);">
+                                <p style="color: black;">Las Vegas Strip</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Gran Cañón</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Fremont Street</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Sphere</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Excursiones al aire libre</p>
+                            </li>
+                        </ul>
+                        <!-- Modal de cotizar ciudad-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                            onclick="asignarValor('Las Vegas')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card cardDestino">
+                    <section class="sectionDestino">
+                        <img src="./img/miami//1.jpeg" alt="">
+                        <img src="./img/miami//2.jpg" alt="">
+                        <img src="./img/miami//3.jpg" alt="">
+                        <img src="./img/miami//4.jpg" alt="">
+                        <img src="./img/miami//5.jpeg" alt="">
+                    </section>
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center; color: #00B5E2;">Miami Florida</h4>
+                        <hr class="divider">
+                        <ul class="custom-list">
+                            <li style="color:rgb(240, 143, 53);">
+                                <p style="color: black;">South Beach</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Art Deco Historic District</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Calle ocho de Little Havana</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Vizcaya Museum and Gardens</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Parque Nacional de los Everglades</p>
+                            </li>
+                        </ul>
+                        <!-- Modal de cotizar ciudad-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                            onclick="asignarValor('Miami Florida')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card cardDestino">
+                    <section class="sectionDestino">
+                        <img src="./img/washington/1.jpeg" alt="">
+                        <img src="./img/washington/2.jpg" alt="">
+                        <img src="./img/washington/3.jpg" alt="">
+                        <img src="./img/washington/4.jpg" alt="">
+                        <img src="./img/washington/5.jpeg" alt="">
+                    </section>
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center; color: #00B5E2;">Washington D.C</h4>
+                        <hr class="divider">
+                        <ul class="custom-list">
+                            <li style="color:rgb(240, 143, 53);">
+                                <p style="color: black;">National Mall</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Museos del Smithsonian</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Casa Blanca</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Capitolio de los Estados Unidos</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Georgetown</p>
+                            </li>
+                        </ul>
+                        <!-- Modal de cotizar ciudad-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                            onclick="asignarValor('Washington D.C')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card cardDestino">
+                    <section class="sectionDestino">
+                        <img src="./img/sanDiego/1.jpg" alt="">
+                        <img src="./img/sanDiego/2.jpg" alt="">
+                        <img src="./img/sanDiego/3.jpg" alt="">
+                        <img src="./img/sanDiego/4.jpg" alt="">
+                        <img src="./img/sanDiego/5.jpg" alt="">
+                    </section>
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center; color: #00B5E2;">San Diego California</h4>
+                        <hr class="divider">
+                        <ul class="custom-list">
+                            <li style="color:rgb(240, 143, 53);">
+                                <p style="color: black;">Balboa Park</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Zoológico de San Diego</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">La jolla cove</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Old Town San Diego State Park</p>
+                            </li>
+                            <li style="color: rgb(240, 143, 53);">
+                                <p style="color: black;">Coronado Island</p>
+                            </li>
+                        </ul>
+                        <!-- Modal de cotizar ciudad-->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                            onclick="asignarValor('San Diego California')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
-    <!-- cards End -->
+
+
+    <!-- Destination Start -->
 
     <!-- Footer Start -->
     <footer>
         <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;" id="contact">
-            <div class="row pt-2">
+            <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <a href="" class="navbar-brand">
-                        <img src="../../assets/Logo.png" alt="Bidaia" width="180" height="100">
+                        <img src="../../assets/Logo.png" alt="Bidaia" width="150" height="70">
                     </a>
                     <p style="text-align: justify;">En Bidaia somos personas responsables, con actitud de servicio y
                         apasionados por lo que hacemos.
@@ -290,8 +502,8 @@
                         <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-primary btn-square mr-2" href="#"><i
                                 class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-primary btn-square mr-2" href="#"><i
-                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-primary btn-square mr-2" href="#">
+                            <i class="fab fa-youtube"></i></a>
                         <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/bidaia_co/"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
@@ -300,18 +512,22 @@
                     </a>
                     </br>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-1 col-md-6">
 
                 </div>
-                <div class="col-lg-2 col-md-6">
-
-                </div>
-                <div class="col-lg-4 col-md-6" style="align-content: center;">
-                    </br>
-                    <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contáctenos</h5>
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contáctenos</h6>
                     <p><i class="fa fa-map-marker-alt mr-2"></i>Cañaveral 2 local 17, Pereira, Risaralda, Colombia</p>
                     <p><i class="fa fa-phone-alt mr-2"></i>+57 3127096446</p>
                     <p><i class="fa fa-envelope mr-2"></i>bidaiaagenciadeviajes@gmail.com</p>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Medios de Pago</h6>
+                    <img src="../../img/medios de pago/visa.png" style="width: 40px; height: 40px;">
+                    <img src="../../img/medios de pago/Mastercard.png" style="width: 40px; height: 40px;">
+                    <img src="../../img/medios de pago/Davivienda.png" style="width: 40px; height: 40px;">
+                    <img src="../../img/medios de pago/Bancolombia.png" style="width: 40px; height: 40px;">
                 </div>
             </div>
         </div>
@@ -336,32 +552,29 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-
     <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="../lib/easing/easing.min.js"></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../lib/tempusdominus/js/moment.min.js"></script>
-    <script src="../lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="../mail/jqBootstrapValidation.min.js"></script>
-    <script src="../mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="../js/main.js"></script>
-    <script src="../script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
-    <script src="./form.js"></script>
-    <script>
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    </script>
+    <script src="../../lib/easing/easing.min.js"></script>
+    <script src="../../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../../lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../../lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="../../mail/jqBootstrapValidation.min.js"></script>
+    <script src="../../mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../../js/main.js"></script>
+    <script src="../../js/app.js"></script>
+    <script src="../form.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

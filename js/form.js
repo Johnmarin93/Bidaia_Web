@@ -13,6 +13,7 @@ document.getElementById('form')
     .then(() => {
       btn.value = 'Cotizar';
       alert('Enviado con éxito, pronto nos comunicaremos con usted.');
+      document.getElementById("form").reset();
     }, (err) => {
       btn.value = 'Cotizar';
       alert(JSON.stringify(err));
