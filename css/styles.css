@@ -10076,25 +10076,28 @@
 
 .modal-principal {
   display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1000; /* Asegúrate de que sea mayor que el z-index del menú */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  z-index: 1000; /* Asegúrate de que sea mayor que el z-index del menú */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex; /* Usar flexbox para centrar */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
   
 }
 
 .modal-content-principal {
-    margin: auto;
-    display: block;
-    max-width: 90%; /* Ajusta el ancho máximo */
-    max-height: 90%; /* Ajusta la altura máxima */
-    width: auto; /* Permite que el ancho se ajuste */
-    height: auto; /* Permite que la altura se ajuste */
+  max-width: 90%; /* Ajusta el ancho máximo */
+  max-height: 90%; /* Ajusta la altura máxima */
+  width: auto; /* Permite que el ancho se ajuste */
+  height: auto; /* Permite que la altura se ajuste */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
 }
+
 
 .close-principal {
   position: absolute;
@@ -10104,4 +10107,10 @@
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .close-principal {
+      font-size: 20px; /* Reducir el tamaño del botón de cierre en pantallas pequeñas */
+  }
 }

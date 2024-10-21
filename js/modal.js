@@ -1,5 +1,5 @@
 window.onload = function() {
-    document.getElementById('modal').style.display = 'block';
+    document.getElementById('modal').style.display = 'flex';
 };
 
 function closeModal() {
