@@ -5,3 +5,5 @@ window.onload = function() {
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
+
+
