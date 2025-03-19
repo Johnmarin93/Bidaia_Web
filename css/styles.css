@@ -10114,32 +10114,3 @@
   }
 }
 
-.boton-reserva {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #0dcaf0; /* Azul celeste */
-  color: white;
-  padding: 15px 35px;
-  font-size: 13px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 50px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.boton-reserva:hover {
-  background: #0ab8dd; /* Azul más oscuro al pasar el mouse */
-  color: white !important;
-  transform: scale(1.1);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.boton-reserva i {
-  margin-right: 10px;
-  font-size: 24px;
-}
