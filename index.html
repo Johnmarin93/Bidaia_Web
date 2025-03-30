@@ -358,32 +358,40 @@
                                     <input class="btn btn-primary btn-block py-3" type="submit" id="button" value="Cotizar" >
                                 </div>
                             </form>
-                            <script>
-                                emailjs.init('9QRjE7zwHrH_s71DH');
-                            
-                                document.getElementById("form").addEventListener("submit", function (event) {
-                                    var recaptchaResponse = grecaptcha.getResponse(); // Obtiene la respuesta de reCAPTCHA
-                                    if (recaptchaResponse.length === 0) {
-                                        alert("Por favor, completa el reCAPTCHA antes de enviar.");
-                                        event.preventDefault(); // Evita el envío del formulario
-                                        return;
+                            <!-- EmailJS -->
+                                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+                                <script>
+                                    emailjs.init('9QRjE7zwHrH_s71DH');
+
+                                    // Habilita el botón cuando el reCAPTCHA se marca
+                                    function enableSubmit() {
+                                        document.getElementById("submitButton").disabled = false;
                                     }
-                            
-                                    // Envía el formulario usando EmailJS
-                                    emailjs.sendForm('service_xxx', 'template_xxx', this)
-                                        .then(function(response) {
-                                            alert("Formulario enviado con éxito.");
-                                            console.log("SUCCESS!", response);
-                                            document.getElementById("form").reset();
-                                            grecaptcha.reset(); // Reinicia reCAPTCHA
-                                        }, function(error) {
-                                            alert("Error al enviar el formulario.");
-                                            console.log("FAILED...", error);
-                                        });
-                            
-                                    event.preventDefault(); // Evita el envío predeterminado para usar EmailJS
-                                });
-                            </script>
+
+                                    document.getElementById("form").addEventListener("submit", function (event) {
+                                        event.preventDefault(); // Evita el envío predeterminado
+
+                                        var recaptchaResponse = grecaptcha.getResponse(); // Obtiene respuesta de reCAPTCHA
+                                        if (recaptchaResponse.length === 0) {
+                                            alert("Por favor, completa el reCAPTCHA antes de enviar.");
+                                            return;
+                                        }
+
+                                        // Envía el formulario con EmailJS
+                                        emailjs.sendForm('service_xxx', 'template_xxx', this)
+                                            .then(function(response) {
+                                                alert("Formulario enviado con éxito.");
+                                                console.log("SUCCESS!", response);
+                                                document.getElementById("form").reset();
+                                                grecaptcha.reset(); // Reinicia reCAPTCHA
+                                                document.getElementById("submitButton").disabled = true; // Deshabilita el botón nuevamente
+                                            }, function(error) {
+                                                alert("Error al enviar el formulario.");
+                                                console.log("FAILED...", error);
+                                            });
+                                    });
+                                </script>
                         </div>
                     </div>
                 </div>
