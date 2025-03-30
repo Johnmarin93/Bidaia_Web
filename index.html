@@ -358,7 +358,7 @@
                                 </div>
                                <br>
                                 <div>
-                                    <input class="btn btn-primary btn-block py-3" type="submit" id="submitButton" value="Cotizar" disabled>
+                                    <input class="btn btn-primary btn-block py-3" type="submit" id="button" value="Cotizar" disabled>
                                 </div>
                             </form>
                             <script type="text/javascript"
@@ -368,11 +368,11 @@
                                     emailjs.init('9QRjE7zwHrH_s71DH'); // Asegúrate de que esta API Key es correcta
                                 
                                     function recaptchaSuccess() {
-                                        document.getElementById("submitButton").disabled = false;
+                                        document.getElementById("button").disabled = false;
                                     }
                                 
                                     function recaptchaExpired() {
-                                        document.getElementById("submitButton").disabled = true;
+                                        document.getElementById("button").disabled = true;
                                     }
                                 
                                     document.getElementById("form").addEventListener("submit", function (event) {
@@ -391,7 +391,7 @@
                                                 console.log("SUCCESS!", response);
                                                 document.getElementById("form").reset();
                                                 grecaptcha.reset();
-                                                document.getElementById("submitButton").disabled = true;
+                                                document.getElementById("button").disabled = true;
                                             })
                                             .catch(function(error) {
                                                 alert("Error al enviar el formulario. Revisa la consola para más detalles.");
