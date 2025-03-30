@@ -355,15 +355,47 @@
                                 </div>
                                <br>
                                 <div>
-                                    <input class="btn btn-primary btn-block py-3" type="submit" id="button" value="Cotizar" >
+                                    <input class="btn btn-primary btn-block py-3" type="submit" id="submitButton" value="Cotizar" disabled>
                                 </div>
                             </form>
                             <script type="text/javascript"
                                 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-                                <script type="text/javascript">
-                                emailjs.init('9QRjE7zwHrH_s71DH')
-                            </script>
+                                <script>
+                                    emailjs.init('9QRjE7zwHrH_s71DH');
+                                
+                                    function recaptchaSuccess() {
+                                        document.getElementById("submitButton").disabled = false;
+                                    }
+                                
+                                    function recaptchaExpired() {
+                                        document.getElementById("submitButton").disabled = true;
+                                    }
+                                
+                                    document.getElementById("form").addEventListener("submit", function (event) {
+                                        event.preventDefault(); // Bloquea el envío por defecto
+                                
+                                        var recaptchaResponse = grecaptcha.getResponse(); // Obtiene la respuesta de reCAPTCHA
+                                
+                                        if (recaptchaResponse.length === 0) {
+                                            alert("Por favor, completa el reCAPTCHA antes de enviar.");
+                                            return; // No hace nada si el reCAPTCHA no está validado
+                                        }
+                                
+                                        // Si el reCAPTCHA es válido, envía el formulario
+                                        emailjs.sendForm('service_xxx', 'template_xxx', this)
+                                            .then(function(response) {
+                                                alert("Formulario enviado con éxito.");
+                                                console.log("SUCCESS!", response);
+                                                document.getElementById("form").reset();
+                                                grecaptcha.reset(); // Reinicia reCAPTCHA
+                                                document.getElementById("submitButton").disabled = true; // Deshabilita el botón nuevamente
+                                            }, function(error) {
+                                                alert("Error al enviar el formulario.");
+                                                console.log("FAILED...", error);
+                                            });
+                                    });
+                                </script>
                         </div>
                     </div>
                 </div>
