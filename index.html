@@ -350,42 +350,55 @@
                                         Autorizo el tratamiento de mis datos personales según la <a style="color:#0dcaf0" href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.
                                     </label>
                                 </div>
+                                <!-- reCAPTCHA -->
                                 <div class="recaptcha-container">
-                                    <div  class="g-recaptcha" data-sitekey="6LdPIwQrAAAAAND7NWRXvnUaKwSRcsSnGj6f0b3_"></div>
+                                    <div class="g-recaptcha" 
+                                        data-sitekey="6LdPIwQrAAAAAND7NWRXvnUaKwSRcsSnGj6f0b3_"
+                                        data-callback="recaptchaSuccess"
+                                        data-expired-callback="recaptchaExpired"></div>
                                 </div>
                                <br>
                                 <div>
-                                    <input class="btn btn-primary btn-block py-3" type="submit" id="button" value="Cotizar" >
+                                    <input class="btn btn-primary btn-block py-3" type="submit" id="submitButton" value="Cotizar" disabled>
                                 </div>
                             </form>
+                            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
                             <script>
                                 emailjs.init('9QRjE7zwHrH_s71DH');
                             
+                                function recaptchaSuccess() {
+                                    document.getElementById("submitButton").disabled = false;
+                                }
+                            
+                                function recaptchaExpired() {
+                                    document.getElementById("submitButton").disabled = true;
+                                }
+                            
                                 document.getElementById("form").addEventListener("submit", function (event) {
+                                    event.preventDefault(); // Bloquea el envío por defecto
+                            
                                     var recaptchaResponse = grecaptcha.getResponse(); // Obtiene la respuesta de reCAPTCHA
+                            
                                     if (recaptchaResponse.length === 0) {
                                         alert("Por favor, completa el reCAPTCHA antes de enviar.");
-                                        event.preventDefault(); // Evita el envío del formulario
-                                        return;
+                                        return; // No hace nada si el reCAPTCHA no está validado
                                     }
                             
-                                    // Envía el formulario usando EmailJS
+                                    // Si el reCAPTCHA es válido, envía el formulario
                                     emailjs.sendForm('service_xxx', 'template_xxx', this)
                                         .then(function(response) {
                                             alert("Formulario enviado con éxito.");
                                             console.log("SUCCESS!", response);
                                             document.getElementById("form").reset();
                                             grecaptcha.reset(); // Reinicia reCAPTCHA
+                                            document.getElementById("submitButton").disabled = true; // Deshabilita el botón nuevamente
                                         }, function(error) {
                                             alert("Error al enviar el formulario.");
                                             console.log("FAILED...", error);
                                         });
-                            
-                                    event.preventDefault(); // Evita el envío predeterminado para usar EmailJS
                                 });
                             </script>
-                            <!-- EmailJS -->
-                            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
                         </div>
                     </div>
                 </div>
