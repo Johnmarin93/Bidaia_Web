@@ -288,7 +288,7 @@
                             <h1 class="text-white m-0">Cotización</h1>
                         </div>
                         <div class="card-body rounded-bottom bg-white p-5">
-                            <form id="form">
+                            <form id="form" onsubmit="return validarRecaptcha()">
                                 <div class="form-group">
                                     <input type="text" class="form-control p-4" placeholder="Nombre y apellido"
                                         name="name" required="required" />
