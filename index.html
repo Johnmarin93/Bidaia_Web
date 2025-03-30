@@ -344,7 +344,16 @@
                                             </select></div>
                                     </div>
                                 </div>
-
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="dataConsent" required>
+                                    <label class="form-check-label" for="dataConsent">
+                                        Autorizo el tratamiento de mis datos personales según la <a style="color:#0dcaf0" href="politica-privacidad.html" target="_blank">Política de Privacidad</a>.
+                                    </label>
+                                </div>
+                                <div class="recaptcha-container">
+                                    <div  class="g-recaptcha" data-sitekey="6LdPIwQrAAAAAND7NWRXvnUaKwSRcsSnGj6f0b3_"></div>
+                                </div>
+                               <br>
                                 <div>
                                     <input class="btn btn-primary btn-block py-3" type="submit" id="button" value="Cotizar" >
                                 </div>
@@ -544,6 +553,7 @@
     <script src="js/form.js"></script>
     <script src="js/modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

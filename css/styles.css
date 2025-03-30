@@ -10524,3 +10524,10 @@ h6,
     font-size: 20px; /* Reducir el tamaño del botón de cierre en pantallas pequeñas */
   }
 }
+
+.recaptcha-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Opcional: Ajusta el espacio superior */
+}
