@@ -10321,7 +10321,7 @@ h6,
 
 .content_box::-webkit-scrollbar {
   width: 5px;
-  height: 20px;
+  height: 40px;
   background: transparent;
 }
 
@@ -10341,7 +10341,7 @@ h6,
 
 .content_box {
   padding: 20px;
-  height: 300px;
+  height: 375px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
