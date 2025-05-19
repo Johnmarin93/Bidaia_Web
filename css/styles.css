@@ -10489,16 +10489,16 @@ h6,
 .modal-principal {
   display: none; /* Oculto por defecto */
   position: fixed;
-  z-index: 1000; /* Asegúrate de que sea mayor que el z-index del menú */
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
-  display: flex; /* Usar flexbox para centrar */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content-principal {
@@ -10517,6 +10517,7 @@ h6,
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+  z-index: 1010; /* Más alto que modal-principal */
 }
 
 @media (max-width: 600px) {
@@ -10530,4 +10531,12 @@ h6,
   justify-content: center;
   align-items: center;
   margin-top: 10px; /* Opcional: Ajusta el espacio superior */
+}
+
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
