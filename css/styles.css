@@ -10540,3 +10540,17 @@ h6,
   height: 100%;
   width: 100%;
 }
+
+.modal-video {
+  width: 80vw;      /* ancho grande en móviles */
+  max-width: 400px; /* no crece demasiado en pantallas grandes */
+  height: auto;
+}
+
+/* Para pantallas medianas y grandes */
+@media (min-width: 768px) {
+  .modal-video {
+    width: 35vw;    /* más pequeño en escritorio */
+    max-width: none;
+  }
+}
